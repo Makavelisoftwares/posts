@@ -1,0 +1,13 @@
+<%- include('partials/header')  %> 
+    <%if(posts){%>
+        <%posts.forEach((post)=>{%>
+            <p><%=post.message%></p>
+        <%})%>
+    <%}else{%>
+        <p>No posts to display</p>
+    <%}%>
+    <form action="/" method="post">
+        <textarea name="message" id="message" placeholder="write post"></textarea>
+        <button>Post message</button>
+    </form>    
+<%- include('partials/footer')  %> 
